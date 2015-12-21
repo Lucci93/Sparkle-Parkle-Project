@@ -1,0 +1,969 @@
+/* CSS structure */
+*, *:after, *:before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.clearfix:before, .clearfix:after {
+    display: table;
+    content: '';
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+::-webkit-input-placeholder{
+    color: #005E49;
+    font-family: 'Varela Round', sans-serif;
+    padding-left: 0.2em;
+}
+
+::-moz-placeholder{
+    color: #005E49;
+    font-family: 'Varela Round', sans-serif;
+    padding-left: 0.2em;
+    opacity:  1;
+}
+
+:-ms-input-placeholder{
+    color: #005E49;
+    font-family: 'Varela Round', sans-serif;
+    padding-left: 0.2em;
+}
+
+i, .fragment, .annota, .cita, button, .docum {
+    cursor: pointer;
+}
+
+.tooltip {
+    background-image: none !important;
+    background: #005E49 !important;
+    color: white !important;
+    border: 2px solid #41B59B !important;
+    font-family: 'Varela Round', sans-serif !important;
+    font-size: 0.7em !important;
+    padding: 0.3em !important;
+}
+
+/* Nav-bar content style */
+
+.nav-bar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 40px;
+    width: 100%;
+}
+
+.tile {
+    color: #41B59B;
+    float: left;
+    font-size: 2em;
+    margin-left: 1.2em;
+    margin-top: 0;
+    font-family: 'Lobster', cursive;
+}
+
+.right-bar {
+    color: #41B59B;
+    margin-top: 0.3em;
+    float: right;
+    margin-right: 2em;
+    font-size: 1.5em;
+}
+
+a {
+    margin-left: 0.3em;
+}
+
+i:hover,
+i:focus {
+    color: #FFFFFF;
+}
+
+i:active {
+    color: #41B59B;
+}
+
+#f-user {
+    background-color: transparent;
+    border: none;
+    color: #41B59B;
+    }
+
+#user-form, #email-form {
+    font-size: 1.5em;
+	font-family: 'Varela Round', sans-serif;
+    color: #005E49;
+    background-color: #FFFFFF;
+    border: 1px solid #41B59B ;
+    width: 40%;
+}
+
+#login {
+    margin: 0 auto;
+    width: 90%;
+}
+
+#cerca {
+    margin: 0 auto;
+    width: 90%;
+}
+
+#search-form {
+    color: #005E49;
+    background-color: #FFFFFF;
+    border: 1px solid #41B59B ;
+    width: 70%;
+    font-size: 1.5em;
+	font-family: 'Varela Round', sans-serif;
+
+}
+
+#f-search, #f-search_plus {
+    background-color: transparent;
+    border: none;
+    color: #41B59B;
+    margin-left: 1em;
+}
+
+/* Gestione content */
+
+body {
+    font-size: 1em;
+	color: #FFFFFF;
+	font-family: 'Varela Round', sans-serif;
+}
+
+#wrap {
+    margin-bottom: 1em;
+}
+
+.content {
+    background-color: #009876;
+}
+
+.main {
+	overflow: hidden;
+	margin: 0 auto;
+	padding: 100px 0 10em 0;
+	max-width: 1100px;
+	width: 90%;
+}
+
+.main h2 {
+	margin: 0.6em 0 0.1em 0;
+	color: #41B59B;
+	text-align: center;
+	font-size: 2.5em;
+    font-family: 'Lobster', cursive;
+}
+
+.editor {
+    position: relative;
+    margin: 0 auto;
+    width: 100%;
+    height: 22px;
+    background-color: #005E49;
+}
+
+.editor button {
+    float: left;
+    font-size: 1em;
+    font-family: 'Lobster', cursive;
+    text-align: left;
+    margin-left: 10px;
+    border: 0;
+    color: #41B59B;
+    background-color: #005E49;
+}
+
+.editor i {
+    float: right;
+    padding: 1px;
+    margin-top: 3px;
+    margin-right: 10px;
+    color: #41B59B;
+}
+
+.editor button:hover,
+.editor button:focus {
+    color: #FFFFFF;
+}
+
+.editor button:active {
+    color: #41B59B;
+}
+
+.editor i:hover,
+.editor i:focus {
+    color: #FFFFFF;
+}
+
+.editor i:active {
+    color: #41B59B;
+}
+
+.testo {
+    position: absolute;
+    overflow-y: auto;
+    overflow-x: hidden;
+    width: 100%;
+    height: 100%;
+    padding: 1em;
+    word-wrap: break-word;
+    color: #000000;
+	margin: 0 auto;
+    font-size: 1em;
+}
+
+.testo i:hover, .testo i:focus, .testo i:active {
+    color: #000000;
+}
+
+.document {
+	margin: 0 auto;
+    min-height: 400px;
+    max-height: 500px;
+	max-width: 1000px;
+	width: 100%;
+	background-color: #FFFFFF;
+    border: 2px solid #005E49;
+}
+
+.doc h2 {
+    margin: 0 auto;
+    color: #FFFFFF;
+    font-size: 1.5em;
+}
+
+.doc {
+    padding-top: 8%;
+	margin: 0 auto;
+	padding: 0.5em;
+	max-width: 1000px;
+    max-height: 500px;
+    min-height: 400px;
+	width: 100%;
+	border-radius: 8px;
+    border: 2px solid #005E49;
+	background-color: #41B59B;
+}
+
+.doc-el, .savage, .notSavage {
+    overflow-y: auto;
+    overflow-x: hidden;
+    word-wrap: break-word;
+    background-color: #41B59B;
+    color: #FFFFFF;
+    margin: 0 auto;
+    width: 100%;
+    height: 100%;
+    min-height: 300px;
+    max-height: 350px;
+    max-width: 900px;
+    border-radius: 8px;
+}
+
+.doc-el {
+    border-radius: 0px;
+}
+
+.doc-left {
+    width: 32.5%;
+    float: left;
+}
+
+.doc-right {
+    width: 67%;
+    float: right;
+}
+
+.savage h2, .notSavage h2 {
+    font-size: 1.2em;
+    font-family: 'Varela Round', sans-serif;
+    margin: 5px auto;
+}
+
+.savage {
+    width: 49.5%;
+    float: left;
+}
+
+.notSavage {
+    width: 49.5%;
+    float: right;
+}
+
+.docum{
+    margin: 3px auto;
+    padding-top: 1.5px;
+    padding-bottom: 1.5px;
+    width: 100%;
+    height: auto;
+    color: #FFFFFF;
+    font-size: 0.8em;
+    font-family: 'Varela Round', sans-serif;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.docum:nth-child(1) {
+    margin-top: 32.5px;
+}
+
+.docum:nth-child(odd) {
+    background-color: #005E49;
+}
+
+.docum:nth-child(even) {
+    background-color: #00795E;
+}
+
+/* Visibile solo al momento della creazione delle annotazioni */
+.annota, .cita {
+    width: 100%;
+    min-height: 30px;
+    height: 100%;
+    margin: 3px auto;
+    margin-bottom: 1px;
+    padding: 1px;
+    background-color: #005E49;
+    border-radius: 8px;
+    font-size: 0.6em;
+    font-family: 'Varela Round', sans-serif;
+    text-align: center;
+    z-index: 9;
+}
+
+.cita {
+    background-color: #00795E;
+    border: 2px solid #DF0023;
+}
+
+.cita .annota {
+    font-size: 0.9em;
+    z-index: 10;
+}
+
+.annota p, .cita p {
+    width: 100%;
+    margin: 5px auto;
+}
+
+.nascosto {
+    display:none;
+}
+
+.down {
+    text-align: right;
+    font-size: 0.7em;
+}
+
+.down a {
+    color: #00795E;
+    font-family: 'Lobster', cursive;
+    font-size: 1.2em;
+}
+
+/* Div nascosto */
+
+.add, .mod, .err, .ann, .gruppi, .filter, .ricerca_avanzata {
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    text-align: center;
+    background-color: #41B59B;
+    max-width: 500px;
+    max-height: 500px;
+    width: 100%;
+    height: 100%;
+    border: 5px solid #00795E;
+    border-radius: 5px;
+    position: absolute;
+
+}
+
+.err {
+    z-index: 3;
+}
+
+.add h2, .mod h2, .err h2, .ann h2, .gruppi h2, .filter h2, .ricerca_avanzata h2 {
+    margin: 0 auto;
+    color: #FFFFFF;
+    font-size: 1.5em;
+    font-family: 'Lobster', cursive;
+}
+
+.mod h2 i {
+    font-size: 1em;
+}
+
+hr {
+    display:block;
+    margin: 5px 0 5px 0;
+    border: 1px solid #FFFFFF;
+}
+
+.ann_annotazione, .gruppi_check, .errore, .ricercare {
+    overflow-y: auto;
+    overflow-x: hidden;
+    max-height: 400px;
+}
+.ann_annotazione p, .ann_annotazione h2 , .ricerca_avanzata p {
+    font-size: 1em;
+    font-family: 'Varela Round', sans-serif;
+}
+
+.ricerca_avanzata select, .ricerca_avanzata input {
+    max-width: 200px;
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer i {
+    margin: 0 10px 2px 0;
+    float: right;
+    padding: 2px;
+    color: #FFFFFF;
+}
+
+.footer i:hover,
+.footer i:focus {
+    color: #005E49;
+}
+
+.footer i:active {
+    color: #FFFFFF;
+}
+
+.lista, .filtri, .gruppi_check, .ricercare {
+    text-align: left;
+    margin-left: 5px;
+}
+
+.lista button {
+    background-color: #41B59B;
+    border: none;
+    font-family: 'Varela Round', sans-serif;
+    color: #FFFFFF;
+    font-size: 1em;
+}
+
+.lista button:hover,
+.lista button:focus {
+    color: #005E49;
+}
+
+.lista button:active {
+    color: #FFFFFF;
+}
+
+.lista li {
+    margin-left: 1em;
+}
+
+.start_end {
+	width: 70%;
+    float: left;
+    display: inline;
+}
+
+.start_end input {
+    width: 24%;
+}
+
+/* Gestione della lista elenco salvati */
+.elenco {
+	width: auto;
+	margin: 0 auto;
+}
+
+.elenco ul {
+    margin: 0 auto;
+    padding: 0;
+    list-style: none;
+}
+
+.elenco h3 {
+    padding: 6px;
+    width: 100%;
+    height: auto;
+	font-size: 0.85em;
+	cursor: pointer;
+    font-family: 'Lobster', cursive;
+	background-color: #005E49;
+    color: #41B59B;
+    border-radius: 6px;
+}
+
+.elenco h3:hover {
+	color: #FFFFFF;
+}
+
+.fa-chevron-circle-down, .fa-chevron-circle-up {
+    margin-right: 0.5em;
+    font-size: 0.9em;
+}
+
+.notifica {
+    float: right;
+    text-align: center;
+    font-size: 0.85em;
+    margin-top: -4px;
+    width: auto;
+    height: auto;
+    padding-top: 6px;
+}
+
+/* All'inizio saranno nascosti */
+.elenco ul ul {
+	display: none;
+    margin: 0 3px 0 3px;
+}
+
+/* Per gestione frammenti di annotazioni*/
+
+.an_doi{
+    background-color:rgba(0, 121, 94, 0.7);
+}
+
+.an_author {
+    background-color:rgba(63, 211, 20, 0.7);
+}
+
+.an_url {
+    background-color: rgba(10, 58, 20, 0.7);
+}
+
+.an_title {
+    background-color: rgba(76, 121, 184, 0.7);
+}
+
+.an_comment{
+	background-color: rgba(188, 72, 0, 0.7);
+}
+
+.an_year{
+	background-color: rgba(255, 177, 48, 0.7);
+}
+
+.an_cite{
+	background-color: rgba(105, 190, 250, 0.7);
+}
+
+.an_rethoric{
+	background-color: rgba(146, 91, 0, 0.7);
+}
+
+.fade_b,.fade_t {
+    background-color: transparent;
+}
+
+/* Controllo header */
+
+svg {
+    align-content: center;
+}
+
+.head {
+	position: fixed;
+	top: 0;
+    left: 0;
+	z-index: 4;
+    min-height: 460px;
+	width: 100%;
+	height: 100%;
+	background-color: #41B59B;
+}
+
+.head h1 {
+	margin: -1.5em 0 0 0;
+}
+
+.logo, .loader {
+	position: absolute;
+	left: 0;
+	width: 100%;
+	opacity: 0;
+	cursor: default;
+	pointer-events: none;
+}
+/* Il logo viene messo esattamente al centro dello schermo */
+.logo {
+	top: -2%;
+	height: 100%;
+    width: 100%;
+	-webkit-transform: translate3d(0,25%,0);
+	transform: translate3d(0,25%,0);
+}
+
+.loader {
+	bottom: 20%;
+}
+
+.head .inner {
+	display: block;
+	margin: 0 auto;
+}
+
+.head .logo img {
+    position: absolute;
+	min-height: 200px;
+	height: 60%;
+}
+
+.loaded .head .logo img {
+	max-height: 350px;
+}
+
+.head .loader svg path {
+	fill: none;
+	stroke-width: 6;
+}
+
+.head .loader svg path.loader-circle-out {
+	stroke: #41B59B;
+}
+
+.head .loader svg path.loader-circle {
+	-webkit-transition: stroke-dashoffset 0.2s;
+	transition: stroke-dashoffset 0.2s;
+	stroke: #FFFFFF;
+}
+
+/* Animazioni
+   Animazione iniziale degli elementi dell'header sono inizialmente fuori dallo schermo*/
+.loading .logo,
+.loading .loader {
+	opacity: 1;
+}
+/* Le curve di bezier permettono di avere un entrata dell'effetto smooth */
+.loading .logo {
+	-webkit-animation: animInitialLogo 1s cubic-bezier(0.7,0,0.3,1) both;
+	animation: animInitialLogo 1s cubic-bezier(0.7,0,0.3,1) both;
+}
+
+@-webkit-keyframes animInitialLogo {
+	from {
+        opacity: 0;
+    }
+}
+
+@keyframes animInitialLogo {
+	from {
+        opacity: 0;
+    }
+}
+
+.loading .loader {
+	-webkit-animation: animInitialLoader 1s cubic-bezier(0.7,0,0.3,1) both;
+	animation: animInitialLoader 1s cubic-bezier(0.7,0,0.3,1) both;
+}
+
+@-webkit-keyframes animInitialLoader {
+	from {
+        opacity: 0;
+        -webkit-transform: scale3d(0.5,0.5,1);
+    }
+}
+
+@keyframes animInitialLoader {
+	from {
+        opacity: 0;
+        -webkit-transform: scale3d(0.5,0.5,1);
+        transform: scale3d(0.5,0.5,1);
+    }
+}
+
+/* elementi dell'header quando il loading finisce */
+.loaded .logo,
+.loaded .loader {
+	opacity: 1;
+}
+/* l'elemento si muove verso l'alto e la scalatura del logo gradualmente diminuisce sino a raggiungere il suo stato normale */
+.loaded .logo {
+	-webkit-transform-origin: 50% 0;
+	transform-origin: 50% 0;
+	-webkit-animation: animLoadedLogo 1s cubic-bezier(0.7,0,0.3,1) forwards;
+	animation: animLoadedLogo 1s cubic-bezier(0.7,0,0.3,1) forwards;
+}
+
+@-webkit-keyframes animLoadedLogo {
+	to {
+        -webkit-transform: translate3d(0,100%,0) translate3d(0,50px,0) scale3d(0.65,0.65,1);
+    }
+}
+
+@keyframes animLoadedLogo {
+	to { -webkit-transform: translate3d(0,100%,0) translate3d(0,50px,0) scale3d(0.65,0.65,1); transform: translate3d(0,100%,0) translate3d(0,50px,0) scale3d(0.65,0.65,1); }
+}
+
+.loaded .loader {
+	-webkit-animation: animLoadedLoader 0.5s cubic-bezier(0.7,0,0.3,1) forwards;
+	animation: animLoadedLoader 0.5s cubic-bezier(0.7,0,0.3,1) forwards;
+}
+
+@-webkit-keyframes animLoadedLoader {
+	to {
+        opacity: 0;
+        -webkit-transform: translate3d(0,-100%,0) scale3d(0.3,0.3,1);
+    }
+}
+
+@keyframes animLoadedLoader {
+	to {
+        opacity: 0;
+        -webkit-transform: translate3d(0,-100%,0)
+            scale3d(0.3,0.3,1); transform: translate3d(0,-100%,0) scale3d(0.3,0.3,1);
+    }
+}
+
+/* Animazione dell'header, quando il loading finisce questo si è spostato verso l'alto */
+.loaded .head {
+	-webkit-animation: animLoadedHeader 1s cubic-bezier(0.7,0,0.3,1) forwards;
+	animation: animLoadedHeader 1s cubic-bezier(0.7,0,0.3,1) forwards;
+}
+
+@-webkit-keyframes animLoadedHeader {
+	to { -webkit-transform: translate3d(0,-100%,0); }
+}
+
+@keyframes animLoadedHeader {
+	to {
+        -webkit-transform: translate3d(0,-100%,0);
+        transform: translate3d(0,-100%,0);
+    }
+}
+
+/* Content animations */
+.loaded .main h2,
+.loaded .main .document,
+.loaded .main .document .box {
+	-webkit-animation: animLoadedContent 1s cubic-bezier(0.7,0,0.3,1) both;
+	animation: animLoadedContent 1s cubic-bezier(0.7,0,0.3,1) both;
+}
+/* Crea al caricamento un effetto di apparizione dei figli asincrono */
+.loaded .main h2,
+.loaded .main .document .box:first-child {
+	-webkit-animation-delay: 0.1s;
+	animation-delay: 0.1s;
+}
+
+.loaded .main .document .box:nth-child(2) {
+	-webkit-animation-delay: 0.15s;
+	animation-delay: 0.15s;
+}
+
+.loaded .main .document .box:nth-child(3) {
+	-webkit-animation-delay: 0.2s;
+	animation-delay: 0.2s;
+}
+
+@-webkit-keyframes animLoadedContent {
+	from {
+        opacity: 0;
+        -o-transform: scale3d(0.3,0.3,1);
+        -ms-transform: scale3d(0.3,0.3,1);
+        -webkit-transform: scale3d(0.3,0.3,1);
+    }
+}
+
+@keyframes animLoadedContent {
+	from {
+        opacity: 0;
+        -webkit-transform: scale3d(0.3,0.3,1);
+        transform: scale3d(0.3,0.3,1); }
+}
+
+/* Absolute position per header dopo animazione */
+.layout-switch .head {
+	position: absolute;
+}
+
+/* Animazione per la barra di caricamento */
+.wait,
+.wait:before,
+.wait:after {
+    background-color: #41B59B;
+    -webkit-animation: load1 1s infinite ease-in-out;
+    animation: load1 1s infinite ease-in-out;
+    width: 1em;
+    height: 4em;
+}
+.wait:before,
+.wait:after {
+    position: absolute;
+    content: '';
+}
+.wait:before {
+    left: -1.5em;
+    -webkit-animation-delay: -0.32s;
+    animation-delay: -0.32s;
+}
+.wait {
+    text-indent: -9999em;
+    margin: 88px auto;
+    position: relative;
+    font-size: 11px;
+    -webkit-transform: translateZ(0);
+    -ms-transform: translateZ(0);
+    transform: translateZ(0);
+    -webkit-animation-delay: -0.16s;
+    animation-delay: -0.16s;
+}
+.wait:after {
+    left: 1.5em;
+}
+@-webkit-keyframes load1 {
+    0%,
+    80%,
+    100% {
+        box-shadow: 0 0 #41B59B;
+        height: 4em;
+    }
+    40% {
+        box-shadow: 0 -2em #41B59B;
+        height: 5em;
+    }
+    }
+@keyframes load1 {
+    0%,
+    80%,
+    100% {
+        box-shadow: 0 0 #41B59B;
+        height: 4em;
+    }
+    40% {
+        box-shadow: 0 -2em #41B59B;
+        height: 5em;
+    }
+}
+
+/* Per mobile */
+
+@media screen and (max-width: 640px) {
+    .head .logo svg {
+        margin-top: -20%;
+    }
+}
+
+@media screen and (max-width: 640px) and (max-device-width: 1280px) {
+    .tile {
+        font-size: 1.7em;
+    }
+
+	.main h2 {
+		font-size: 2.25em;
+	}
+
+    .column {
+        float: none;
+        width: auto;
+    }
+
+    #search-form {
+        font-size: 0.5em;
+    }
+
+    #f-search, #f-search_plus {
+        font-size: 0.5em;
+    }
+
+    #user-form, #email-form {
+        font-size: 0.7em;
+    }
+
+    #f-user {
+        font-size: 0.5em;
+    }
+
+    .nav-bar {
+        font-size: 0.7em
+    }
+
+    .doc h2 {
+        font-size: 1em;
+    }
+
+    .savage h2, .notSavage h2 {
+        font-size: 0.8em
+    }
+
+    .docum {
+        font-size: 0.5em;
+    }
+
+    .add, .mod, .err, .ann, .gruppi, .filter, .ricerca_avanzata {
+        font-size: 0.7em;
+        height: 100%;
+    }
+
+    .errore {
+        margin-bottom: 7%;
+	    height: 300px;
+    }
+
+    .editor i {
+        font-size: 1.2em;
+    }
+
+    .editor button {
+        font-size: 0.8em;
+    }
+    .annota, .cita {
+        font-size: 0.5em;
+    }
+
+    #f-start, #f-end {
+	    font-size: 0.7em;
+    }
+
+    .testo {
+        font-size: 0.7em;
+    }
+
+    .testo img {
+        height: auto;
+        width: auto;
+        max-width: 300px;
+        max-height: 300px;
+    }
+
+    .testo table {
+        width: 100%;
+    }
+
+    .elenco h3 {
+    	height: auto;
+        font-size: 7px;
+    }
+
+    .notifica {
+        padding: none;
+        float: right;
+        font-size: 6px;
+    }
+}
+
+/*regola css di Davide per non sminchiare la lunghezza della select degli autori*/
+.annotazione select{
+    max-width:80%;
+}
+
+.mod_annotazione select{
+    max-width:80%;
+}

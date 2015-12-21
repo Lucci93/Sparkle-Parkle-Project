@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="it">
+
+	<head>
+		<meta charset="utf-8">
+        <!-- For IE edge mode -->
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <!-- For responsive website -->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<title>Sparkle Parkle | Annotazioni semantiche</title>
+
+        <!-- Icon -->
+        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+        <!-- CSS -->
+        <link href="src/css/index.css" rel="stylesheet">
+        <!-- Font family 'Varela Round' -->
+        <link href='http://fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css'>
+        <!-- Font family 'Lobster' -->
+        <link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
+        <!-- For CSStransforms -->
+        <script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.js"></script>
+        <!-- jQuery necessari per Bootstrap e per animazioni Javascript -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+        <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script>
+	</head>
+
+	<body class="content">
+		<div id="container" class="container">
+            <div class="nav-bar">
+                <h1 class="tile" id="tile">Reader</h1>
+                <div class="right-bar">
+                    <a id="p-filter" title="Filtri">
+                        <i class="fa fa-filter"></i>
+                    </a>
+                    <a id="p-gruppi" title="Gruppi">
+                        <i class="fa fa-users"></i>
+                    </a>
+                    <a id="p-eye" title="Visualizza annotazioni">
+                        <i id="fa-eye" class="fa fa-eye"></i>
+                    </a>
+                    <a id="p-doc" title="Document">
+                        <i class="fa fa-folder"></i>
+                    </a>
+                    <a id="p-search" title="Search">
+                        <i class="fa fa-search"></i>
+                    </a>
+                    <a id="p-login" title="Login">
+                        <i id="fa-user" class="fa fa-user"></i>
+                    </a>
+                    <a id="p-info" title="Info">
+                        <i class="fa fa-info-circle"></i>
+                    </a>
+                </div>
+            </div>
+			<!-- initial header -->
+            <header class="head">
+                <h1 class="logo">
+                    <img class="inner" width="100%" height="100%" src="src/Img/Finale.svg">
+                </h1>
+                <div class="loader">
+                    <svg class="inner" width="60px" height="60px" viewBox="0 0 80 80">
+                        <path class="loader-circle-out" d="M40,10C57.351,10,71,23.649,71,40.5S57.351,71,40.5,71 S10,57.351,10,40.5S23.649,10,40.5,10z"/>
+                        <path id="loader-circle" class="loader-circle" d="M40,10C57.351,10,71,23.649,71,40.5S57.351,71,40.5,71 S10,57.351,10,40.5S23.649,10,40.5,10z"/>
+                    </svg>
+                </div>
+            </header>
+            <div class="add">
+                <h2>Aggiungi annotazione</h2>
+                <hr>
+                <div class="annotazione">
+                </div>
+                    <ul class="lista">
+                    </ul>
+                <div class="footer">
+                    <hr>
+                    <i id="f-cancel" class="fa fa-remove fa-lg" title="Annulla"></i>
+                    <i id="f-send" class="fa fa-send-o" title="Annota"></i>
+                    <i id="f-arrow" class="fa fa-arrow-left" title="Annota"></i>
+                </div>
+            </div><!-- Nascosto -->
+            <div class="mod">
+                <h2>Modifica annotazione  <i id="f-change_type" class="fa fa-reply-all fa-lg" title="cambia tipo"></i></h2>
+                <hr>
+                <div class="mod_annotazione">
+                </div>
+                <div class="footer">
+                    <hr>
+                    <div class="start_end">
+                    </div>
+                    <i id="f-ok" class="fa fa-check fa-lg" title="Ok"></i>
+                    <i id="f-no" class="fa fa-remove fa-lg" title="Esci"></i>
+                </div>
+            </div><!-- Nascosto pure lui-->
+            <div class="err">
+                <h2>Attenzione</h2>
+                <hr>
+                <p class="errore">
+                </p>
+            </div><!-- Non c'è due senza tre-->
+            <div class="ann">
+                <h2>Annotazioni</h2>
+                <hr>
+                <div class="ann_annotazione">
+                </div>
+                <div class="footer">
+                    <hr>
+                    <i id="f-stop" class="fa fa-remove fa-lg" title="Esci"></i>
+                </div>
+            </div><!-- Non c'è tre senza quattro-->
+			<div class="ricerca_avanzata">
+                <h2>Ricerca Avanzata</h2>
+                <hr>
+                <div class="ricercare">
+
+                </div>
+                <div class="footer">
+                    <hr>
+                    <i id="f-ok_ricerca" class="fa fa-search fa-lg" title="Ricerca"></i>
+					<i id="f-remove_ricerca" class="fa fa-remove fa-lg" title="Esci"></i>
+                </div>
+            </div><!-- Basta mi sono rotto-->
+            <div class="gruppi">
+                <h2>Gruppi</h2>
+                <hr>
+                <div class="gruppi_check">
+                </div>
+                <div class="footer">
+                    <hr>
+                    <i id="f-ok_gruppi" class="fa fa-users fa-lg" title="Esci"></i>
+                </div>
+            </div><!-- Basta mi sono rotto-->
+            <div class="filter">
+                <h2>Filtri</h2>
+                <hr>
+                <div class="filtri">
+                    <input id="filter-autor" type="checkbox" name="filter" value="an_author" checked>
+                    <label for="filter-autor">Autore</label><br>
+                    <input id="filter-data" type="checkbox" name="filter" value="an_year" checked>
+                    <label for="filter-data">Data di pubblicazione</label><br>
+                    <input id="filter-title" type="checkbox" name="filter" value="an_title" checked>
+                    <label for="filter-title">Titolo</label><br>
+                    <input id="filter-doi" type="checkbox" name="filter" value="an_doi" checked>
+                    <label for="filter-doi">DOI</label><br>
+                    <input id="filter-url" type="checkbox" name="filter" value="an_url" checked>
+                    <label for="filter-url">URL</label><br>
+                    <input id="filter-comment" type="checkbox" name="filter" value="an_comment" checked>
+                    <label for="filter-comment">Commento</label><br>
+                    <input id="filter-denotation" type="checkbox" name="filter" value="an_rethoric" checked>
+                    <label for="filter-denotation">Annotazione retorica</label><br>
+                    <input id="filter-citation" type="checkbox" name="filter" value="an_cite" checked>
+                    <label for="filter-citation">Citazione</label>
+                </div>
+                <div class="footer">
+                    <hr>
+                    <i id="f-filter" class="fa fa-filter fa-lg" title="Filtra"></i>
+                </div>
+            </div><!-- Basta mi sono rotto-->
+			<!-- Main content -->
+            <div class="main">
+                <h2>Sparkle Parkle</h2>
+                <div id="wrap">
+                    <div id="login" autocomplete="on">
+                        <input id="user-form" name="name" type="text" placeholder="Username">
+                        <input id="email-form" name="email" type="email" placeholder="Email">
+                        <button type="button" id="f-user" title="Log In">
+                            <i class="fa fa-user fa-2x"></i>
+                        </button>
+                    </div>
+                    <div id="cerca" autocomplete="on">
+                            <input id="search-form" name="search" type="text" placeholder="Cerca...">
+                            <button id="f-search" title="Ricerca">
+                                <i class="fa fa-search fa-2x"></i>
+                            </button>
+							<button id="f-search_plus" title="Ricerca avanzata">
+                                <i class="fa fa-search-plus fa-2x"></i>
+                            </button>
+                    </div>
+                </div>
+                <div id="document" class="document">
+                    <div class="editor">
+                        <button id="f-save">Salva Tutto</button>
+                        <i id="f-fuseki" class="fa fa-bomb fa-lg" title="Cancella"></i>
+                        <i id="f-eraser" class="fa fa-trash fa-lg" title="Cancella"></i>
+                        <i id="f-pencil" class="fa fa-pencil fa-lg" title="Modifica"></i>
+                        <i id="f-plus" class="fa fa-plus fa-lg" title="Aggiungi"></i>
+                    </div>
+                    <div class="testo">
+                    </div>
+                </div>
+                <div id="doc" class="doc clearfix">
+                    <div class="doc-left">
+                        <h2>Documenti</h2>
+                        <div class="doc-el">
+                        </div>
+                    </div>
+                    <div class="doc-right">
+                        <h2>Annotazioni</h2>
+                        <div class="savage">
+                            <h2>Salvati</h2>
+                            <!-- Menu delle annotazioni salvate -->
+                            <div class="elenco">
+                                <ul>
+                                    <li>
+                                        <h3><i class="fa fa-chevron-circle-down"></i>Autori<div class="notifica" id="not_autore"></div></h3>
+                                        <ul id="lista_autore">
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <h3><i class="fa fa-chevron-circle-down"></i>Date di pubblicazione<div class="notifica" id="not_data"></div></h3>
+                                        <ul id="lista_data">
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <h3><i class="fa fa-chevron-circle-down"></i>Titoli<div class="notifica" id="not_titolo"></div></h3>
+                                        <ul id="lista_titolo">
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <h3><i class="fa fa-chevron-circle-down"></i>DOI<div class="notifica" id="not_doi"></div></h3>
+                                        <ul id="lista_doi">
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <h3><i class="fa fa-chevron-circle-down"></i>URL<div class="notifica" id="not_url"></div></h3>
+                                        <ul id="lista_url">
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <h3><i class="fa fa-chevron-circle-down"></i>Commenti<div class="notifica" id="not_commento"></div></h3>
+                                        <ul id="lista_commento">
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <h3><i class="fa fa-chevron-circle-down"></i>Denotazioni retoriche<div class="notifica" id="not_denotazione"></div></h3>
+                                        <ul id="lista_denotazione">
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <h3><i class="fa fa-chevron-circle-down"></i>Citazioni<div class="notifica" id="not_citazione"></div></h3>
+                                        <ul id="lista_citazione">
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <h3><i class="fa fa-chevron-circle-down"></i>Tutti<div class="notifica" id="not_tutti"></div></h3>
+                                        <ul id="lista_tutti">
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="notSavage">
+                            <h2>Non Salvati</h2>
+                        </div>
+                    </div>
+                </div>
+                <p class="down">About <a href="http://vitali.web.cs.unibo.it/TechWeb15/ProgettoDelCorso">Progetto Raschietto</a></p>
+            </div>
+		</div><!-- Container -->
+	</body>
+
+    <!-- Codice Javascript -->
+    <script type="text/javascript" src="src/js/main.js"></script>
+    <script type="text/javascript" src="src/js/nav-menu.js"></script>
+    <script type="text/javascript" src="src/js/anno_func.js"></script>
+    <script type="text/javascript" src="src/js/annotator.js"></script>
+    <script type="text/javascript" src="src/js/document.js"></script>
+    <script type="text/javascript" src="src/js/wgxpath.install.js"></script>
+    <script type="text/javascript" src="src/js/salva_tutto.js"></script>
+    <script type="text/javascript" src="src/js/la_grande_botta.js"></script>
+    <script type="text/javascript" src="src/js/json.js"></script>
+</html>
